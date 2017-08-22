@@ -1,0 +1,9 @@
+d:\users\dennis\development\visual studio 2013\Projects\AfterDarkSettings\AfterDarkSettings.Modules.Module.FlyingToasters\bin\Debug\AfterDarkSettings.Modules.Module.FlyingToasters.dll
+d:\users\dennis\development\visual studio 2013\Projects\AfterDarkSettings\AfterDarkSettings.Modules.Module.FlyingToasters\bin\Debug\AfterDarkSettings.Modules.Module.FlyingToasters.pdb
+d:\users\dennis\development\visual studio 2013\Projects\AfterDarkSettings\AfterDarkSettings.Modules.Module.FlyingToasters\bin\Debug\AfterDarkSettings.Modules.Ext.dll
+d:\users\dennis\development\visual studio 2013\Projects\AfterDarkSettings\AfterDarkSettings.Modules.Module.FlyingToasters\bin\Debug\AfterDarkSettings.Modules.Ext.pdb
+d:\users\dennis\development\visual studio 2013\Projects\AfterDarkSettings\AfterDarkSettings.Modules.Module.FlyingToasters\obj\Debug\AfterDarkSettings.Modules.Module.FlyingToasters.dll
+d:\users\dennis\development\visual studio 2013\Projects\AfterDarkSettings\AfterDarkSettings.Modules.Module.FlyingToasters\obj\Debug\AfterDarkSettings.Modules.Module.FlyingToasters.pdb
+d:\users\dennis\development\visual studio 2013\Projects\AfterDarkSettings\AfterDarkSettings.Modules.Module.FlyingToasters\obj\Debug\AfterDarkSettings.Modules.Module.FlyingToasters.csprojResolveAssemblyReference.cache
+d:\users\dennis\development\visual studio 2013\Projects\AfterDarkSettings\AfterDarkSettings\bin\Debug\AfterDarkSettings.Modules.Module.FlyingToasters.dll
+d:\users\dennis\development\visual studio 2013\Projects\AfterDarkSettings\AfterDarkSettings\bin\Debug\AfterDarkSettings.Modules.Module.FlyingToasters.pdb

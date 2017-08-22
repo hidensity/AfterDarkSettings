@@ -1,0 +1,4 @@
+d:\users\dennis\development\visual studio 2013\Projects\AfterDarkSettings\AfterDarkSettings.Modules.Ext\bin\Debug\AfterDarkSettings.Modules.Ext.dll
+d:\users\dennis\development\visual studio 2013\Projects\AfterDarkSettings\AfterDarkSettings.Modules.Ext\bin\Debug\AfterDarkSettings.Modules.Ext.pdb
+d:\users\dennis\development\visual studio 2013\Projects\AfterDarkSettings\AfterDarkSettings.Modules.Ext\obj\Debug\AfterDarkSettings.Modules.Ext.dll
+d:\users\dennis\development\visual studio 2013\Projects\AfterDarkSettings\AfterDarkSettings.Modules.Ext\obj\Debug\AfterDarkSettings.Modules.Ext.pdb

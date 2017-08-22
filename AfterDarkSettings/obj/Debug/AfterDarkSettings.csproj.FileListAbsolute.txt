@@ -1,0 +1,11 @@
+d:\users\dennis\development\visual studio 2013\Projects\AfterDarkSettings\AfterDarkSettings\bin\Debug\AfterDarkSettings.exe.config
+d:\users\dennis\development\visual studio 2013\Projects\AfterDarkSettings\AfterDarkSettings\bin\Debug\AfterDarkSettings.exe
+d:\users\dennis\development\visual studio 2013\Projects\AfterDarkSettings\AfterDarkSettings\bin\Debug\AfterDarkSettings.pdb
+d:\users\dennis\development\visual studio 2013\Projects\AfterDarkSettings\AfterDarkSettings\obj\Debug\AfterDarkSettings.csprojResolveAssemblyReference.cache
+d:\users\dennis\development\visual studio 2013\Projects\AfterDarkSettings\AfterDarkSettings\obj\Debug\AfterDarkSettings.Forms.MainForm.resources
+d:\users\dennis\development\visual studio 2013\Projects\AfterDarkSettings\AfterDarkSettings\obj\Debug\AfterDarkSettings.Properties.Resources.resources
+d:\users\dennis\development\visual studio 2013\Projects\AfterDarkSettings\AfterDarkSettings\obj\Debug\AfterDarkSettings.csproj.GenerateResource.Cache
+d:\users\dennis\development\visual studio 2013\Projects\AfterDarkSettings\AfterDarkSettings\obj\Debug\AfterDarkSettings.exe
+d:\users\dennis\development\visual studio 2013\Projects\AfterDarkSettings\AfterDarkSettings\obj\Debug\AfterDarkSettings.pdb
+d:\users\dennis\development\visual studio 2013\Projects\AfterDarkSettings\AfterDarkSettings\bin\Debug\AfterDarkSettings.Modules.Ext.dll
+d:\users\dennis\development\visual studio 2013\Projects\AfterDarkSettings\AfterDarkSettings\bin\Debug\AfterDarkSettings.Modules.Ext.pdb
