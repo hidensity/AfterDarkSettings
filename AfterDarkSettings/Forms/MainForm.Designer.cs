@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             this.grpGeneral = new System.Windows.Forms.GroupBox();
-            this.lblModule = new System.Windows.Forms.Label();
-            this.cmbModule = new System.Windows.Forms.ComboBox();
-            this.chkSound = new System.Windows.Forms.CheckBox();
             this.chkAnimatedPreview = new System.Windows.Forms.CheckBox();
+            this.chkSound = new System.Windows.Forms.CheckBox();
+            this.cmbModule = new System.Windows.Forms.ComboBox();
+            this.lblModule = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.mnuFile = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuFileOpen = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuFileExit = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuFileSeperator01 = new System.Windows.Forms.ToolStripSeparator();
+            this.mnuFileExit = new System.Windows.Forms.ToolStripMenuItem();
             this.grpGeneral.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -55,23 +55,15 @@
             this.grpGeneral.TabStop = false;
             this.grpGeneral.Text = "General";
             // 
-            // lblModule
+            // chkAnimatedPreview
             // 
-            this.lblModule.AutoSize = true;
-            this.lblModule.Location = new System.Drawing.Point(3, 22);
-            this.lblModule.Name = "lblModule";
-            this.lblModule.Size = new System.Drawing.Size(42, 13);
-            this.lblModule.TabIndex = 0;
-            this.lblModule.Text = "Module";
-            // 
-            // cmbModule
-            // 
-            this.cmbModule.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbModule.FormattingEnabled = true;
-            this.cmbModule.Location = new System.Drawing.Point(51, 19);
-            this.cmbModule.Name = "cmbModule";
-            this.cmbModule.Size = new System.Drawing.Size(394, 21);
-            this.cmbModule.TabIndex = 1;
+            this.chkAnimatedPreview.AutoSize = true;
+            this.chkAnimatedPreview.Location = new System.Drawing.Point(105, 46);
+            this.chkAnimatedPreview.Name = "chkAnimatedPreview";
+            this.chkAnimatedPreview.Size = new System.Drawing.Size(116, 17);
+            this.chkAnimatedPreview.TabIndex = 3;
+            this.chkAnimatedPreview.Text = "Animated Previews";
+            this.chkAnimatedPreview.UseVisualStyleBackColor = true;
             // 
             // chkSound
             // 
@@ -83,15 +75,23 @@
             this.chkSound.Text = "Enable Sound";
             this.chkSound.UseVisualStyleBackColor = true;
             // 
-            // chkAnimatedPreview
+            // cmbModule
             // 
-            this.chkAnimatedPreview.AutoSize = true;
-            this.chkAnimatedPreview.Location = new System.Drawing.Point(105, 46);
-            this.chkAnimatedPreview.Name = "chkAnimatedPreview";
-            this.chkAnimatedPreview.Size = new System.Drawing.Size(116, 17);
-            this.chkAnimatedPreview.TabIndex = 3;
-            this.chkAnimatedPreview.Text = "Animated Previews";
-            this.chkAnimatedPreview.UseVisualStyleBackColor = true;
+            this.cmbModule.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbModule.FormattingEnabled = true;
+            this.cmbModule.Location = new System.Drawing.Point(51, 19);
+            this.cmbModule.Name = "cmbModule";
+            this.cmbModule.Size = new System.Drawing.Size(394, 21);
+            this.cmbModule.TabIndex = 1;
+            // 
+            // lblModule
+            // 
+            this.lblModule.AutoSize = true;
+            this.lblModule.Location = new System.Drawing.Point(3, 22);
+            this.lblModule.Name = "lblModule";
+            this.lblModule.Size = new System.Drawing.Size(42, 13);
+            this.lblModule.TabIndex = 0;
+            this.lblModule.Text = "Module";
             // 
             // menuStrip1
             // 
@@ -120,6 +120,11 @@
             this.mnuFileOpen.Size = new System.Drawing.Size(195, 22);
             this.mnuFileOpen.Text = "&Open .ini File...";
             // 
+            // mnuFileSeperator01
+            // 
+            this.mnuFileSeperator01.Name = "mnuFileSeperator01";
+            this.mnuFileSeperator01.Size = new System.Drawing.Size(192, 6);
+            // 
             // mnuFileExit
             // 
             this.mnuFileExit.Name = "mnuFileExit";
@@ -127,11 +132,6 @@
             this.mnuFileExit.Size = new System.Drawing.Size(195, 22);
             this.mnuFileExit.Text = "E&xit";
             this.mnuFileExit.Click += new System.EventHandler(this.mnuFileExit_Click);
-            // 
-            // mnuFileSeperator01
-            // 
-            this.mnuFileSeperator01.Name = "mnuFileSeperator01";
-            this.mnuFileSeperator01.Size = new System.Drawing.Size(192, 6);
             // 
             // MainForm
             // 
@@ -166,6 +166,6 @@
         private System.Windows.Forms.ToolStripMenuItem mnuFileOpen;
         private System.Windows.Forms.ToolStripSeparator mnuFileSeperator01;
         private System.Windows.Forms.ToolStripMenuItem mnuFileExit;
-        internal System.Windows.Forms.ComboBox cmbModule;
+        private System.Windows.Forms.ComboBox cmbModule;
     }
 }

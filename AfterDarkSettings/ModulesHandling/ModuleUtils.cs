@@ -1,4 +1,4 @@
-﻿using AfterDarkSettings.Modules.Interfaces;
+﻿using AfterDarkSettings.Modules.Base;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -26,9 +26,9 @@ namespace AfterDarkSettings.ModulesHandling
         /// </summary>
         /// <param name="dllFile">List of Dll files to check for Module capabilities.</param>
         /// <returns>List of IAfterDarkModule objects.</returns>
-        public static IEnumerable<IAfterDarkModule> GetModules(List<string> dllFiles)
+        public static IEnumerable<AfterDarkModuleBase> GetModules(List<string> dllFiles)
         {
-            return dllFiles.SelectMany(GetModulesFromAssembly);
+            return dllFiles.SelectMany(GetModulesFromAssembly).Where(t => t != null);
         }
 
         /// <summary>
@@ -36,15 +36,15 @@ namespace AfterDarkSettings.ModulesHandling
         /// </summary>
         /// <param name="dllFile">List of Dll files to check for Module capabilities.</param>
         /// <returns>List of IAfterDarkModule objects.</returns>
-        public static IEnumerable<IAfterDarkModule> GetModulesFromAssembly(string dllFile)
+        public static IEnumerable<AfterDarkModuleBase> GetModulesFromAssembly(string dllFile)
         {
             try
             {
                 // Load Dll.
                 Assembly assembly = Assembly.LoadFile(dllFile);
-                var moduleClasses = assembly.GetTypes().Where(t => t.GetInterfaces().Contains(typeof(IAfterDarkModule)));
+                var moduleClasses = assembly.GetTypes().Where(t => t.IsClass && !t.IsAbstract && t.IsSubclassOf(typeof(AfterDarkModuleBase)));
 
-                return moduleClasses.Select(m => (IAfterDarkModule)assembly.CreateInstance(m.FullName));
+                return moduleClasses.Select(m => (AfterDarkModuleBase)assembly.CreateInstance(m.FullName));
             }
             catch (Exception)
             {

@@ -15,6 +15,18 @@ namespace AfterDarkSettings.Forms
     {
         private FormHelper FormHelper;
 
+        #region Public Properties
+
+        /// <summary>
+        /// Gets the ComboBox object holding the modules.
+        /// </summary>
+        public ComboBox ModuleComboBox
+        {
+            get { return cmbModule; }
+        }
+
+        #endregion
+
         public MainForm()
         {
             InitializeComponent();

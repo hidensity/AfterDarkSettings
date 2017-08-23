@@ -40,8 +40,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Base\Controls\AfterDarkSettingsControlBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Enums\RegistryDataType.cs" />
-    <Compile Include="Interfaces\IAfterDarkModule.cs" />
+    <Compile Include="Base\AfterDarkModuleBase.cs" />
     <Compile Include="ModuleSetting.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

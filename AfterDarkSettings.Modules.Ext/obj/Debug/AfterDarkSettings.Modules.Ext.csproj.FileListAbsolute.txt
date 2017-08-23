@@ -1,4 +1,5 @@
-d:\users\dennis\development\visual studio 2013\Projects\AfterDarkSettings\AfterDarkSettings.Modules.Ext\bin\Debug\AfterDarkSettings.Modules.Ext.dll
-d:\users\dennis\development\visual studio 2013\Projects\AfterDarkSettings\AfterDarkSettings.Modules.Ext\bin\Debug\AfterDarkSettings.Modules.Ext.pdb
-d:\users\dennis\development\visual studio 2013\Projects\AfterDarkSettings\AfterDarkSettings.Modules.Ext\obj\Debug\AfterDarkSettings.Modules.Ext.dll
-d:\users\dennis\development\visual studio 2013\Projects\AfterDarkSettings\AfterDarkSettings.Modules.Ext\obj\Debug\AfterDarkSettings.Modules.Ext.pdb
+D:\Users\Dennis\Development\Visual Studio 2013\Projects\AfterDarkSettings\AfterDarkSettings.Modules.Ext\bin\Debug\AfterDarkSettings.Modules.Ext.dll
+D:\Users\Dennis\Development\Visual Studio 2013\Projects\AfterDarkSettings\AfterDarkSettings.Modules.Ext\bin\Debug\AfterDarkSettings.Modules.Ext.pdb
+D:\Users\Dennis\Development\Visual Studio 2013\Projects\AfterDarkSettings\AfterDarkSettings.Modules.Ext\obj\Debug\AfterDarkSettings.Modules.Ext.dll
+D:\Users\Dennis\Development\Visual Studio 2013\Projects\AfterDarkSettings\AfterDarkSettings.Modules.Ext\obj\Debug\AfterDarkSettings.Modules.Ext.pdb
+D:\Users\Dennis\Development\Visual Studio 2013\Projects\AfterDarkSettings\AfterDarkSettings.Modules.Ext\obj\Debug\AfterDarkSettings.Modules.Ext.csprojResolveAssemblyReference.cache
