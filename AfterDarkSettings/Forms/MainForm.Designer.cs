@@ -58,6 +58,7 @@
             // chkAnimatedPreview
             // 
             this.chkAnimatedPreview.AutoSize = true;
+            this.chkAnimatedPreview.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.chkAnimatedPreview.Location = new System.Drawing.Point(105, 46);
             this.chkAnimatedPreview.Name = "chkAnimatedPreview";
             this.chkAnimatedPreview.Size = new System.Drawing.Size(116, 17);
@@ -68,11 +69,12 @@
             // chkSound
             // 
             this.chkSound.AutoSize = true;
-            this.chkSound.Location = new System.Drawing.Point(6, 46);
+            this.chkSound.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.chkSound.Location = new System.Drawing.Point(2, 46);
             this.chkSound.Name = "chkSound";
-            this.chkSound.Size = new System.Drawing.Size(93, 17);
+            this.chkSound.Size = new System.Drawing.Size(84, 17);
             this.chkSound.TabIndex = 2;
-            this.chkSound.Text = "Enable Sound";
+            this.chkSound.Text = "Mute Sound";
             this.chkSound.UseVisualStyleBackColor = true;
             // 
             // cmbModule

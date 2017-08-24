@@ -45,7 +45,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Core\FormHelper.cs" />
+    <Compile Include="Core\Helpers\ErrorHelper.cs" />
+    <Compile Include="Core\Helpers\FormHelper.cs" />
+    <Compile Include="Core\Helpers\RegistryHelper.cs" />
+    <Compile Include="Enums\ErrorState.cs" />
     <Compile Include="Forms\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>

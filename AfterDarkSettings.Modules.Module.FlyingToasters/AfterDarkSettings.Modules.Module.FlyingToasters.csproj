@@ -16,7 +16,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\AfterDarkSettings\bin\Debug\</OutputPath>
+    <OutputPath>..\AfterDarkSettings\bin\Debug\Modules\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -24,7 +24,7 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>..\AfterDarkSettings\bin\Release\</OutputPath>
+    <OutputPath>..\AfterDarkSettings\bin\Release\Modules\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -54,6 +54,7 @@
     <ProjectReference Include="..\AfterDarkSettings.Modules.Ext\AfterDarkSettings.Modules.Ext.csproj">
       <Project>{1405eece-4b8e-4f44-9f47-9edbd05c7b60}</Project>
       <Name>AfterDarkSettings.Modules.Ext</Name>
+      <Private>False</Private>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

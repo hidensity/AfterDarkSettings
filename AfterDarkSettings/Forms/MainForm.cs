@@ -1,12 +1,6 @@
-﻿using AfterDarkSettings.Core;
+﻿using AfterDarkSettings.Core.Helpers;
+using AfterDarkSettings.Enums;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace AfterDarkSettings.Forms
@@ -23,6 +17,22 @@ namespace AfterDarkSettings.Forms
         public ComboBox ModuleComboBox
         {
             get { return cmbModule; }
+        }
+
+        /// <summary>
+        /// Gets the CheckBox object holding the sound setting.
+        /// </summary>
+        public CheckBox SoundCheckBox
+        {
+            get { return chkSound; }
+        }
+
+        /// <summary>
+        /// Gets the CheckBox object holding the animated previews setting.
+        /// </summary>
+        public CheckBox AnimatedPreviewsCheckBox
+        {
+            get { return chkAnimatedPreview; }
         }
 
         #endregion
@@ -42,15 +52,33 @@ namespace AfterDarkSettings.Forms
             Close();
         }
 
-        #endregion
-
         /// <summary>
         /// Form has been shown.
         /// </summary>
         private void MainForm_Shown(object sender, EventArgs e)
         {
-            FormHelper = new FormHelper(this);
-            FormHelper.Populate();
+            FormHelper = new FormHelper(this, new RegistryHelper());
+
+            try
+            {
+                ErrorState errorState = FormHelper.Populate();
+                if (errorState != ErrorState.Success)
+                {
+                    DialogResult result = ErrorHelper.DisplayError(errorState);
+                    if (result == DialogResult.No)
+                    {
+                        Close();
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                ErrorHelper.DisplayGeneralError();
+
+                Close();
+            }
         }
+
+        #endregion
     }
 }
