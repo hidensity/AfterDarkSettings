@@ -64,9 +64,16 @@ namespace AfterDarkSettings.Core.Helpers
             return ErrorState.Success;
         }
 
+        /// <summary>
+        /// Saves the settings of the currently selected module to the Registry.
+        /// </summary>
         public void SaveSettings()
         {
-            RegistryHelper.SaveSettings((AfterDarkModuleBase)cmbModules.SelectedItem, chkSound.Checked, chkAnimatedPreview.Checked);
+            RegistryHelper.SaveSettings(
+                (AfterDarkModuleBase)cmbModules.SelectedItem,
+                chkSound.Checked, 
+                chkAnimatedPreview.Checked
+            );
         }
 
         /// <summary>
