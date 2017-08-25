@@ -2,6 +2,7 @@
 using AfterDarkSettings.Modules.Ext.Base.Controls;
 using AfterDarkSettings.Modules.Ext;
 using AfterDarkSettings.Modules.Ext.Enums;
+using Microsoft.Win32;
 
 namespace AfterDarkSettings.Modules.Module.FlyingToasters.Controls
 {
@@ -99,7 +100,7 @@ namespace AfterDarkSettings.Modules.Module.FlyingToasters.Controls
             return new ModuleSetting()
             {
                 Name = "Control0",
-                DataType = RegistryDataType.REG_DWORD,
+                DataType = RegistryValueKind.DWord,
                 // TODO: Replace 0 with value coming from the control
                 Value = 0
             };
@@ -114,7 +115,7 @@ namespace AfterDarkSettings.Modules.Module.FlyingToasters.Controls
             return new ModuleSetting()
                 {
                     Name = "Control1",
-                    DataType = RegistryDataType.REG_DWORD,
+                    DataType = RegistryValueKind.DWord,
                     // TODO: Replace 0 with value coming from the control
                     Value = 0
                 };
@@ -129,7 +130,7 @@ namespace AfterDarkSettings.Modules.Module.FlyingToasters.Controls
             return new ModuleSetting()
             {
                 Name = "Control2",
-                DataType = RegistryDataType.REG_DWORD,
+                DataType = RegistryValueKind.DWord,
                 // TODO: Replace 0 with value coming from the control
                 Value = 0
             };
@@ -144,7 +145,7 @@ namespace AfterDarkSettings.Modules.Module.FlyingToasters.Controls
             return new ModuleSetting()
             {
                 Name = "Control3",
-                DataType = RegistryDataType.REG_DWORD,
+                DataType = RegistryValueKind.DWord,
                 // TODO: Replace 0 with value coming from the control
                 Value = 0
             };

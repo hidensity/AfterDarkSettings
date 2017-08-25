@@ -5,15 +5,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Drawing;
+using AfterDarkSettings.Modules.Base;
+using AfterDarkSettings.Modules.Ext;
 
 namespace AfterDarkSettings.Core.Helpers
 {
     class RegistryHelper
     {
-        private const string AD_REGISTRY_PATH = @"Software\Berkeley Systems\After Dark";
-        private const string AD_MODULE_NAME = "After Dark 4.0";
+        private const string AD_GENERAL_REGISTRY_PATH = @"Software\Berkeley Systems\After Dark";
         private const string AD_GENERAL_SETTING_MUTE_SOUND = "Mutesound";
         private const string AD_GENERAL_SETTING_ANIMATED_PREVIEWS = "AnimatedMiniPreview";
+        private const string AD_ACTIVE_MODULE_NAME = "After Dark 4.0";
+        private const string AD_MODULE_SETTINGS_PATH = @"Software\Berkeley Systems\After Dark\Module Settings\After Dark 4.0";
 
         /// <summary>
         /// Gets the name of the currently selected After Dark module.
@@ -23,7 +26,7 @@ namespace AfterDarkSettings.Core.Helpers
         {
             try
             {
-                return GetValue(AD_MODULE_NAME, @"\Folders") as string;
+                return GetValue(AD_ACTIVE_MODULE_NAME, @"\Folders") as string;
             }
             catch (Exception)
             {
@@ -67,6 +70,19 @@ namespace AfterDarkSettings.Core.Helpers
             }
         }
 
+        public void SaveSettings(AfterDarkModuleBase module, bool isMute, bool isAnimatedPreview)
+        {
+            SaveModuleName(module.Name);
+            SaveMuteState(isMute ? 1 : 0);
+            SaveAnimatedPreviewState(isAnimatedPreview ? 1 : 0);
+
+            foreach (ModuleSetting moduleSetting in module.SettingsControl.ModuleSettings)
+            {
+                SaveModuleSetting(moduleSetting, string.Format("{0}\\{1}", AD_MODULE_SETTINGS_PATH, module.RegistryFolder));
+                int i = 6;
+            }
+        }
+
         /// <summary>
         /// Reads a registry key value
         /// </summary>
@@ -77,7 +93,7 @@ namespace AfterDarkSettings.Core.Helpers
         {
             try
             {
-                RegistryKey key = Registry.CurrentUser.OpenSubKey(AD_REGISTRY_PATH + path);
+                RegistryKey key = Registry.CurrentUser.OpenSubKey(AD_GENERAL_REGISTRY_PATH + path);
                 if (key != null)
                 {
                     return key.GetValue(value);
@@ -89,6 +105,66 @@ namespace AfterDarkSettings.Core.Helpers
             {
                 throw;
             }
+        }
+
+        /// <summary>
+        /// Saves the selected module's name.
+        /// </summary>
+        /// <param name="moduleName">Name of the currently selected After Dark module.</param>
+        private void SaveModuleName(string moduleName)
+        {
+            SaveModuleSetting(new ModuleSetting()
+            {
+                Name = AD_ACTIVE_MODULE_NAME,
+                DataType = RegistryValueKind.String,
+                Value = moduleName
+            }, AD_GENERAL_REGISTRY_PATH + @"\Folders");
+        }
+
+        /// <summary>
+        /// Saves the mute state.
+        /// </summary>
+        /// <param name="mute">Value of the mute setting.</param>
+        private void SaveMuteState(int mute)
+        {
+            SaveModuleSetting(new ModuleSetting()
+            {
+                Name = AD_GENERAL_SETTING_MUTE_SOUND,
+                DataType = RegistryValueKind.DWord,
+                Value = mute
+            });
+        }
+
+        /// <summary>
+        /// Saves the animated mini preview state.
+        /// </summary>
+        /// <param name="animatedPreview">Value of the animated preview setting.</param>
+        private void SaveAnimatedPreviewState(int animatedPreview)
+        {
+            SaveModuleSetting(new ModuleSetting()
+            {
+                Name = AD_GENERAL_SETTING_ANIMATED_PREVIEWS,
+                DataType = RegistryValueKind.DWord,
+                Value = animatedPreview
+            });
+        }
+
+        /// <summary>
+        /// Saves a single ModuleSetting to the registry.
+        /// </summary>
+        /// <param name="setting">ModuleSetting to save.</param>
+        /// <param name="path">Path to the registry key.</param>
+        private void SaveModuleSetting(ModuleSetting setting, string path = AD_GENERAL_REGISTRY_PATH)
+        {
+            RegistryKey key = Registry.CurrentUser.OpenSubKey(path, true);
+
+            if (key == null)
+            {
+                Registry.CurrentUser.CreateSubKey(path);
+                key = Registry.CurrentUser.OpenSubKey(path, true);
+            }
+
+            key.SetValue(setting.Name, setting.Value, setting.DataType);
         }
     }
 }

@@ -1,9 +1,7 @@
-﻿using AfterDarkSettings.Modules.Ext.Enums;
+﻿using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AfterDarkSettings.Modules.Ext
 {
@@ -17,7 +15,7 @@ namespace AfterDarkSettings.Modules.Ext
         /// <summary>
         /// Gets the module setting's data type.
         /// </summary>
-        public RegistryDataType DataType { get; set; }
+        public RegistryValueKind DataType { get; set; }
 
         /// <summary>
         /// Gets the module setting's value.

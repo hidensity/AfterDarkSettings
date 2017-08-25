@@ -43,9 +43,7 @@ namespace AfterDarkSettings.Core.Helpers
             this.MainForm = MainForm;
             this.RegistryHelper = RegistryHelper;
 
-            cmbModules = this.MainForm.ModuleComboBox;
-            chkSound = this.MainForm.SoundCheckBox;
-            chkAnimatedPreview = this.MainForm.AnimatedPreviewsCheckBox;
+            Init();
         }
 
         /// <summary>
@@ -64,6 +62,21 @@ namespace AfterDarkSettings.Core.Helpers
             PopulateAnimatedPreviewsCheckBox();
 
             return ErrorState.Success;
+        }
+
+        public void SaveSettings()
+        {
+            RegistryHelper.SaveSettings((AfterDarkModuleBase)cmbModules.SelectedItem, chkSound.Checked, chkAnimatedPreview.Checked);
+        }
+
+        /// <summary>
+        /// Initializes the helper.
+        /// </summary>
+        private void Init()
+        {
+            cmbModules = MainForm.ModuleComboBox;
+            chkSound = MainForm.SoundCheckBox;
+            chkAnimatedPreview = MainForm.AnimatedPreviewsCheckBox;
         }
 
         /// <summary>

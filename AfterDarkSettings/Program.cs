@@ -15,37 +15,37 @@ namespace AfterDarkSettings
         [STAThread]
         static void Main()
         {
-            if (!IsAdmin())
-            {
-                ProcessStartInfo startInfo = new ProcessStartInfo()
-                {
-                    UseShellExecute = true,
-                    WorkingDirectory = Environment.CurrentDirectory,
-                    FileName = Application.ExecutablePath,
-                    Verb = "runas"
-                };
-                try
-                {
-                    Process p = Process.Start(startInfo);
-                    Application.Exit();
-                }
-                catch (Win32Exception)
-                {
-                    MessageBox.Show(
-                        "This utility requires elevated user privileges.",
-                        "Error: UAC Authorization required",
-                        MessageBoxButtons.OK,
-                        MessageBoxIcon.Error
-                    );
-                    return;
-                }
-            }
-            else
-            {
+            //if (!IsAdmin())
+            //{
+            //    ProcessStartInfo startInfo = new ProcessStartInfo()
+            //    {
+            //        UseShellExecute = true,
+            //        WorkingDirectory = Environment.CurrentDirectory,
+            //        FileName = Application.ExecutablePath,
+            //        Verb = "runas"
+            //    };
+            //    try
+            //    {
+            //        Process p = Process.Start(startInfo);
+            //        Application.Exit();
+            //    }
+            //    catch (Win32Exception)
+            //    {
+            //        MessageBox.Show(
+            //            "This utility requires elevated user privileges.",
+            //            "Error: UAC Authorization required",
+            //            MessageBoxButtons.OK,
+            //            MessageBoxIcon.Error
+            //        );
+            //        return;
+            //    }
+            //}
+            //else
+            //{
                 Application.EnableVisualStyles();
                 Application.SetCompatibleTextRenderingDefault(false);
                 Application.Run(new MainForm());
-            }
+            //}
         }
 
         /// <summary>
